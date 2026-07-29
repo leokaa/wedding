@@ -378,6 +378,10 @@ body{
     background-image: url(image/1785119399396_8216639264809591335_8216639264809591335_f5404fff94cafea6f125cf0831f0cf0d.jpg) !important;
 }
 
+#HTML_CODE3{
+    display: block !important;
+}
+
 </style>
 
         <div class="cloud-door left-door"></div>
@@ -1949,8 +1953,10 @@ function pauseScroll(){
     // Cấu hình riêng cho script này
     const ENABLE_RSVP = true;
     const ENABLE_WISH = true;
-    const API_RSVP = "https://service.happyweddingday.vn/api/v1/getDataRsvpBySource/Cus_12_HuongMit";
-    const API_WISH = "https://service.happyweddingday.vn/api/v1/getDataWishBySource/Cus_12_HuongMit";
+    // const API_RSVP = "https://service.happyweddingday.vn/api/v1/getDataRsvpBySource/Cus_12_HuongMit";
+    // const API_WISH = "https://service.happyweddingday.vn/api/v1/getDataWishBySource/Cus_12_HuongMit";
+    const API_RSVP="";
+    const API_WISH="";
     const SCROLL_SPEED = 30; // Tốc độ cuộn
 
     const container = document.getElementById("wish-standalone-container");
@@ -2292,15 +2298,21 @@ icon.src = ICON_LIST[Math.floor(Math.random() * ICON_LIST.length)];
   .popup-author { font-size: 14px; font-weight: bold; color: #ff6f61; text-align: right; }
 </style>
 
-        <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     // --- 1. CẤU HÌNH API ---
-    const urlWishSubmit = 'https://service.happyweddingday.vn/api/v1/addWish';
-    const urlRsvpSubmit = 'https://service.happyweddingday.vn/api/v1/addRsvp';
+    // const urlWishSubmit = 'https://service.happyweddingday.vn/api/v1/addWish';
+    // const urlRsvpSubmit = 'https://service.happyweddingday.vn/api/v1/addRsvp';
+
+    const urlWishSubmit = '/api/addWish.php';
+    const urlRsvpSubmit = '/api/addRsvp.php';
     
     // API lấy dữ liệu Popup
-    const API_RSVP_GET = "https://service.happyweddingday.vn/api/v1/getDataRsvpBySource/Cus_0126_PhamThuy";
-    const API_WISH_GET = "https://service.happyweddingday.vn/api/v1/getDataWishBySource/Cus_0126_PhamThuy";
+    // const API_RSVP_GET = "https://service.happyweddingday.vn/api/v1/getDataRsvpBySource/Cus_0126_PhamThuy";
+    // const API_WISH_GET = "https://service.happyweddingday.vn/api/v1/getDataWishBySource/Cus_0126_PhamThuy";
+
+    const API_WISH_GET = '/api/getWish.php';
+    const API_RSVP_GET = '/api/getRsvp.php';
     
     const source = ""; // Điền source của bạn nếu có
 
