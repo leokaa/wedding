@@ -2951,19 +2951,21 @@
         <script>
             const music = document.getElementById("backgroundMusic");
 
-            window.addEventListener("scroll", function () {
-
-                console.log("Đã phát hiện scroll");
-
+            function playMusic() {
                 music.play()
-                    .then(function () {
+                    .then(() => {
                         console.log("✅ Nhạc đã phát");
                     })
-                    .catch(function (error) {
-                        console.error("❌ Không phát được nhạc:", error);
+                    .catch(error => {
+                        console.log("❌ Không phát được:", error);
                     });
+            }
 
-            }, { once: true });
+            // Khi người dùng chạm màn hình để bắt đầu vuốt
+            document.addEventListener("touchstart", playMusic, { once: true });
+
+            // Dự phòng khi người dùng thao tác bằng chuột
+            document.addEventListener("mousedown", playMusic, { once: true });
         </script>
 
         
